@@ -6,6 +6,9 @@ const port = 8080
 //connect DB
 connectToMongo();
 
+//middleware
+app.use(express.json())
+
 // Available Routes
 app.use('/api/auth', require('./src/routes/auth'))
 app.use('/api/notes', require('./src/routes/notes'))
